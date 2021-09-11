@@ -11,11 +11,11 @@ body {
 */
 
 header {
-    z-index: 10;
-    position: relative;
+    position: fixed;
     top: 0;
     background-color: rgb(20, 20 ,20);
     width: 100%;
+    height: 70px;
     border-bottom: 1px solid white;
 }
 header li {
@@ -48,7 +48,7 @@ header .nav-menu {
     text-align: center;
 }
 header .nav-item {
-    margin-right: 3em;
+    margin-left: 3em;
 }
 header .nav-link {
     font-size: 1.6rem;
@@ -75,76 +75,57 @@ header .mooving-square {
     width: 15px;
     height: 30px;
     background-color: white;
+    animation-name: looping-nav-logo;
+    animation-duration: 1s;
+    transition: none;
+    animation-iteration-count: infinite;
 }
 
 /*
     Section style
 */
-
-section {
-    margin-top: 10px;
-}
 section .content {
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
     width: 300px;
     text-align: center;
     border: 2px solid grey;
     border-radius: 15px;
 }
-
-/*
-    footer style
-*/
-
-footer {
-    position: relative;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(35, 35 ,35);
-    color: white;
-    width: 100%;
-    height: 90px;
-    margin-top: 20px;
-}
-footer a {
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-}
-footer li {
-    list-style: none;
-}
-footer ul {
-    vertical-align: middle;
-}
-footer .inner-left {
-    margin-top: 40px;
-}
-footer .inner-middle {
+section .content p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 2em;
     text-align: center;
-    margin-left: 150px;
 }
-footer .inner-right {
-    margin-top: -10px;
-    text-align: left;
+
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+footer {
+    text-align: center;
 }
 
 @keyframes looping-nav-logo {
-    
+    0% {opacity: 1;}
+    40% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 1000px) {
     header .nav-menu {
         position: fixed;
+        padding: 0;
         left: -100%;
-        top: 4rem;
+        top: 3.5rem;
         flex-direction: column;
-        background-color: rgb(35, 35 ,35);
+        background-color: rgb(20, 20 ,20);
         width: 100%;
         transition: 0.5s;
-        align-items: center;
     }
     header .nav-menu {
         opacity: 0;
@@ -153,21 +134,18 @@ footer .inner-right {
         left: 0;
         opacity: 1;
     }
-
     header .nav-item {
         margin-top: 10px;
         margin-bottom: 10px;
+        margin-left: 0;
     }
-
     header .bars {
         display: block;
         cursor: pointer;
     }
-
     header .bars.active .bar:nth-child(2) {
         opacity: 0;
     }
-
     header .bars.active .bar:nth-child(1) {
         -webkit-transform: translateY(8px) rotate(45deg);
         transform: translateY(8px) rotate(45deg);
