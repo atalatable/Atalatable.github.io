@@ -1,7 +1,0 @@
-section .content {
-    margin: 0 auto;
-    width: 1000px;
-    text-align: center;
-    border: 2px solid grey;
-    border-radius: 15px;
-}
