@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css" />
         <title>Atalata's Website</title>
+        <script src="scripts/main.js"></script>
     </head>
 
-    <body>
+    <body onload="initElement();">
         <header>
             <nav class="navbar">
                 <div class="nav-logo">
@@ -39,7 +40,23 @@
                 <div class="content">
                     <h1>ATALATA</h1>
                     <img src="medias/logo.jpg" alt="Atalata's logo"/>
-                    <p>If you really want you can find me</p>
+                    
+                    <div class="descr">
+                        <p>I am still a beginner, here are the links to some plateforms where I try to train. At the time I am making this webpage, I dont have many points or insane projects. Don't worry it will come later. Feel free to contact me via discord for exemple.</p> 
+                    </div>
+
+                    <div class="medias">
+                        <a href="https://app.hackthebox.com/users/443662" target="_blank">
+                            <span class="iconify" data-icon="simple-icons:hackthebox" style="color: white;" data-width="100"></span>
+                        </a>
+                        <a href="https://tryhackme.com/p/atalata" target="_blank">
+                            <span class="iconify" data-icon="simple-icons:tryhackme" style="color: white;" data-width="100"></span>
+                        </a>
+                        <a href="https://github.com/atalatable" target="_blank">
+                            <span class="iconify" data-icon="akar-icons:github-outline-fill" style="color: white;" data-width="100"></span>
+                        </a>
+                        <span id="discord" class="iconify" data-icon="la:discord" style="color: white;" data-width="100"></span>
+                    </div>
                 </div>
             </section>
 
@@ -48,5 +65,7 @@
             </footer>
         </div>
     </body>
-    <script src="scripts/main.js"></script>
+
+    <script src="script/menu.js"></script>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 </html>

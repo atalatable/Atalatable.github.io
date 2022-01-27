@@ -1,16 +1,16 @@
-const bars = document.querySelector(".bars");
-const navMenu = document.querySelector(".nav-menu");
-const navLink = document.querySelectorAll(".nav-link");
-
-bars.addEventListener("click", mobileMenu);
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function mobileMenu() {
-    bars.classList.toggle("active");
-    navMenu.classList.toggle("active");
+function initElement() {
+    var discordLogo = document.getElementById("discord");
+    discordLogo.onclick = CopyToClipBar;
 }
 
-function closeMenu() {
-    bars.classList.remove("active");
-    navMenu.classList.remove("active");
+function CopyToClipBar() {
+
+    navigator.clipboard.writeText("Atalata#2363")
+        .then(() => {
+        console.log("Text copied to clipboard...");
+        alert("Pseudo Discord copié !");
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
 }

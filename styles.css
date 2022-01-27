@@ -86,7 +86,7 @@ header .mooving-square {
 */
 section .content {
     margin: 0 auto;
-    width: 300px;
+    width: 350px;
     text-align: center;
     border: 2px solid grey;
     border-radius: 15px;
@@ -96,6 +96,28 @@ section .content p {
     padding-right: 10px;
     font-size: 2em;
     text-align: center;
+}
+
+section .content .medias{
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+section .descr p{
+    font-size: 1em;
+    text-align: justify;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+section .content .medias .iconify {
+    width: 50px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+section .content .medias .iconify:hover {
+    width: 60px;
+    cursor: pointer;
 }
 
 .flex-wrapper {
