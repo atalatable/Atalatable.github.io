@@ -19,6 +19,7 @@ function closeMenu() {
 
 /***********************************************************/
 
+window.addEventListener("load", initElement);
 
 // Discord pseudo logic
 
